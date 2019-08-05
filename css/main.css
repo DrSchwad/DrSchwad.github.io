@@ -409,13 +409,14 @@ footer .theme-by {
 .blog-tags a {
   color: {{ site.link-col }};
   text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid #FFFFFF;
   padding: 0px 5px;
 }
 
 .blog-tags a:hover {
-  border-radius: 2px;
-  color: {{ site.hover-col }};
-  background-color: #EEE;
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 .post-preview .blog-tags {
