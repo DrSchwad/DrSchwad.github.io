@@ -284,6 +284,10 @@ footer .footer-links a {
   color: #FFFFFF;
 }
 
+footer .footer-links a:hover {
+  color: #F5F5F5;
+}
+
 footer .footer-links .fa-inverse {
   color: #20222D;
 }
