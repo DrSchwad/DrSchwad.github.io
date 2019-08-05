@@ -281,15 +281,15 @@ footer a {
 }
 
 footer .footer-links a {
-  color: #FFFFFF;
+  color: {{site.footer-text-col}};
 }
 
 footer .footer-links a:hover {
-  color: #F5F5F5;
+  color: {{site.hover-col}};
 }
 
 footer .footer-links .fa-inverse {
-  color: #20222D;
+  color: {{site.footer-col}};
 }
 
 footer .list-inline {
