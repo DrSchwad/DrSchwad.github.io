@@ -26,6 +26,7 @@ navbar-links:
     - Codeforces: "https://codeforces.com/profile/DrSwad"
     - Facebook: "https://www.facebook.com/DrSwad"
     - Telegram: "https://t.me/DrSwad"
+    - github: "https://github.com/DrSchwad"
     - Email: "mailto:drswad2013@gmail.com"
   About Me: "aboutme"
 
@@ -63,18 +64,19 @@ footer-link-col: "#CCCCCC"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Nayeemul Islam Swad
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: true
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+#  rss: true
+  facebook: DrSwad
+  telegram: DrSwad
+  github: DrSchwad
+  email: "drswad2013@gmail.com"
+#  twitter: daattali
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -96,7 +98,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "drschwad.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 

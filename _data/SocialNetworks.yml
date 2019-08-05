@@ -16,6 +16,11 @@ github:
   baseURL: "https://github.com/"
   icon: "fa-github"
 
+telegram:
+  name: "Telegram"
+  baseURL: "https://t.me/"
+  icon: "fa-telegram"
+
 twitter:
   name: "Twitter"
   baseURL: "https://twitter.com/"
