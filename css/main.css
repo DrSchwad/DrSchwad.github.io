@@ -2,8 +2,6 @@
 layout: null
 ---
 
-@import url("pygment_highlights.css");
-
 /* --- General --- */
 
 body {
@@ -808,3 +806,5 @@ pre {
   /* font-style: italic; */
   font-size: 16px;
 }
+
+@import url("pygment_highlights.css");
