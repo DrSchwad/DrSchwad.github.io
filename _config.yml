@@ -4,7 +4,7 @@
 title: Late Night Scribbles
 
 # Short description of your site
-description: Random notes jotted down on random stuff
+description: Some random views jotted down as I stagger through life
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -179,7 +179,6 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      ext-js: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
   -
     scope:
       path: "" # all files
