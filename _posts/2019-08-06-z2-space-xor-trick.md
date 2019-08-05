@@ -7,6 +7,7 @@ comments: true
 ---
 
 Working on it! $1$ and $2$ added equals,
+
 $$
 1 + 2 = 3.
 $$
