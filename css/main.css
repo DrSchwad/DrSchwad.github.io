@@ -783,6 +783,12 @@ pre {
 
 .tag-btn {
   margin: 5px;
+  border: 1px solid #FFFFFF;
+}
+
+.tag-btn:hover {
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 #full-tags-list {
