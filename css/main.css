@@ -799,6 +799,6 @@ pre {
 
 #full-tags-list .tag-entry .entry-date {
   color: #808080;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 16px;
 }
