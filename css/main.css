@@ -66,12 +66,10 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: #000000;
   text-shadow: none;
   /* background-color: {{ site.hover-col }}; */
 }
 ::selection {
-  color: #000000;
   text-shadow: none;
   /* background-color: {{ site.hover-col }}; */
 }
@@ -647,6 +645,7 @@ table {
 table tr {
   border-top: 1px solid #cccccc;
   background-color: #ffffff;
+  color: #404040;
   margin: 0;
   padding: 0;
 }
