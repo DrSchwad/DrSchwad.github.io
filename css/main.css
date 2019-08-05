@@ -280,13 +280,13 @@ footer a {
   color: {{site.footer-link-col}};
 }
 
-/*footer .footer-links a {
+footer .footer-links a {
   color: #FFFFFF;
 }
 
-footer .footer-links .fa {
+footer .footer-links .fa-inverse {
   color: #20222D;
-}*/
+}
 
 footer .list-inline {
   margin: 0;
