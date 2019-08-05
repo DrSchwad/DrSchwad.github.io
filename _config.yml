@@ -20,14 +20,14 @@ description: Random notes jotted down on random stuff
 
 # List of links in the navigation bar
 navbar-links:
-  Archive: "archive"
-  Category: "category"
+  Posts by Category: "category"
   Virtual presence:
     - Codeforces: "https://codeforces.com/profile/DrSwad"
     - Facebook: "https://www.facebook.com/DrSwad"
     - Telegram: "https://t.me/DrSwad"
     - github: "https://github.com/DrSchwad"
     - Email: "mailto:drswad2013@gmail.com"
+  Precious Images: "images"
   About Me: "aboutme"
 
 # Image to show in the navigation bar - image must be a square (width = height)
