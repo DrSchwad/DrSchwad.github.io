@@ -300,7 +300,7 @@ int main() {
 ### Problem 3
 ---
 
-> What is the maximum possible xor for the elements of a subset from a given set?  
+> Given a set $S$ of size $1 \le n \le 10^5$ with elements $0 \le a_i \lt 2^{20}.$ What is the maximum possible xor of the elements of some subset of $S?$  
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 #### Solution
@@ -309,7 +309,7 @@ In this problem, we need to slightly alter the definition of $f(\vec{b}).$ Inste
 
 Now, to get the maximum, we initialize our ```answer``` at 0 and we start iterating the basis vectors starting with the one that has the highest value of $f.$
 
-Suppose, we're at base vector $\vec{b}$ and we find that ```answer``` doesn't have the $f(\vec{b})$'th bit set, then we add $\vec{b}$ with ```answer```. This greedy solution works because $f(\vec{b})$ is the most significant bit at the moment, and we must set it; doesn't matter if all the following bits turn to $0.$
+Suppose, we're at basis vector $\vec{b}$ and we find that ```answer``` doesn't have the $f(\vec{b})$'th bit set, then we add $\vec{b}$ with ```answer```. This greedy solution works because $f(\vec{b})$ is the most significant bit at the moment, and we must set it; doesn't matter if all the following bits turn to $0.$
 
 #### Reference Code
 
