@@ -184,7 +184,7 @@ A few important properties of independent vectors and vector basis that we will 
 
 1. For a set of independent vectors, we can change any of these vectors by adding to it any linear combination of all of them, and the vectors will still stay independent. What's more fascinating is that, the set of vectors in the space representable by some linear combination of this independent set stays exactly the same after the change.
 
-2. Notice that, in case of $\mathbb{Z}\_2^b$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ Which means that, an element vector can either stay or not stay in a linear combination, there's no in-between.
+2. Notice that, in case of $\mathbb{Z}\_2^d$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ Which means that, an element vector can either stay or not stay in a linear combination, there's no in-between.
 
 3. The basis is actually the smallest sized set such that all other vectors in the vector space are representable by a linear combination of just the element vectors of that set.
 
@@ -192,7 +192,7 @@ A few important properties of independent vectors and vector basis that we will 
 
 5. For any set with smaller number of independent vectors than the basis, not all of the vectors in the space will be representable.
 
-6. And there cannot possibly be larger number of independent vectors than basis in a set. If $b$ is the size of the basis of a vector space, then the moment you have $b$ independent vectors in a set, it becomes a basis. You cannot add another vector into it, since that new vector is actually representable using the basis.
+6. And there cannot possibly be larger number of independent vectors than basis in a set. If $d$ is the size of the basis of a vector space, then the moment you have $d$ independent vectors in a set, it becomes a basis. You cannot add another vector into it, since that new vector is actually representable using the basis.
 
 7. For a $d-$dimensional vector space, it's basis can have at most $d$ vector elements.
 
