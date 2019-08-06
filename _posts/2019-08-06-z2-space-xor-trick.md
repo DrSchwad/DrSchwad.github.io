@@ -123,7 +123,7 @@ If, after iterating through all the basis vector $\vec{b}$'s and subtracting the
 Here's the implementation, the vectors being represented by bitmasks:
 
 {% highlight cpp linenos %}
-int basis[i]; // basis[i] keeps the index of the vector whose f value is i
+int basis[b]; // basis[i] keeps the index of the vector whose f value is i
 
 int sz; // Current size of the basis
 
@@ -150,8 +150,55 @@ Let's view some problems now:
 ### Problem 2
 ---
 
-> Given a set $S$ of size $N,$ find the number of distinct integers that can be represented using xor over the set of the given elements.  
+> Given a set $S$ of size $1 \le n \le 10^5$ with elements $1 \le a_i \lt 2^{20}.$ Find the number of distinct integers that can be represented using xor over the set of the given elements.  
 [Link to the source](https://codeforces.com/blog/entry/60003)
+
+#### Solution
+Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of the set. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $le d = 20$ by property $7.$
+
+#### Reference code
+{% highlight cpp linenos %}
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+const int N = 1e5 + 10, LOG_A = 20;
+
+int basis[LOG_A];
+
+int sz;
+
+void insertVector(int mask) {
+	for (int i = 0; i < LOG_A; i++) {
+		if ((mask & 1 << i) == 0) continue;
+
+		if (!basis[i]) {
+			basis[i] = mask;
+			++sz;
+			
+			return;
+		}
+
+		mask ^= basis[i];
+	}
+}
+
+int main() {
+	int n;
+	cin >> n;
+
+	while (n--) {
+		int a;
+		scanf("%d", &a);
+
+		insertVector(a);
+	}
+
+	cout << (1 << sz) << endl;
+
+	return 0;
+}
+{% endhighlight %}
 
 ---
 
