@@ -107,7 +107,7 @@ A few important properties of independent vectors and vector basis that we will 
 
 With just these few properties, we can experience some awesome solutions to a few hard problems. But first, we need to see how we can efficiently find the basis of a vector space of $n$ vectors, where each vector is an element of $\mathbb{Z}\_2^b.$ The algorithm is quite awesome <3 And it works in $O(n \cdot b).$
 
-###The Algorithm:
+### The Algorithm:
 ---
 
 > This algorithm extensively uses properties $1$ and $4,$ and the rest in the background.  
