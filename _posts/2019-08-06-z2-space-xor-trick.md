@@ -63,7 +63,7 @@ This is all there is to it. Transforming xor operations to bitwise addition modu
 
 **$\underline{\text{Vector Space}}$:** Just a collection of vectors.
 
-**$\underline{\mathbb{Z\_2}}$:** $\mathbb{Z\_m}$ is the set of remainders upon division by $m.$ So, $\mathbb{Z\_2}$ is simply the set ${0, 1},$ since these are the only remainders possible when taken modulo $2.$
+**$\underline{\mathbb{Z\_2}}$:** $\mathbb{Z\_m}$ is the set of remainders upon division by $m.$ So, $\mathbb{Z\_2}$ is simply the set $\{0, 1\},$ since these are the only remainders possible when taken modulo $2.$
 
 **$\underline{\mathbb{Z\_2^b}}$:** A $b-$dimensional vector space consisting of all the different position vectors that consists of $b$ coordinates, all coordinates being elements of $\mathbb{Z\_2}.$ For example, earlier our custom cartesian plane was a two-dimensional one. So, it was $\mathbb{Z\_2^2}.$ $\mathbb{Z\_2^3}$ would be a small $3d-$plane with only $2^3 = 8$ points, all coordinates taken modulo $2.$
 
