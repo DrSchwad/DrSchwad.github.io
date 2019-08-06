@@ -59,7 +59,7 @@ In view of this plane, we can represent the number $2 = (10)\_2$ as the point $(
 
 An interesting thing happens here, if we add the two position vectors, the corresponding coordinates get added modulo $2,$ which actually gives us the position vector of the xor of these two position vectors. For example, adding vectors $\overrightarrow{OP}$ and $\overrightarrow{OQ}$ we get $\overrightarrow{OR}$ where $R(1, 0)$ turns out to be the point corresponding the xor of $2$ and $3.$
 
-This is all there is to it. Transforming xor operations to bitwise addition modulo $2$ and, in some cases, vector addition in this way can be helpful in some problems. Let's see one such problem. Before that, let me explain in short what vector space and $\mathbb{Z}\_2^b$ meant earlier. I apologize to any Linear Algebra fans, since I don't want to give formal definitions here to make things look harder than it is. I'll explain the idea of these terms the way I find them in my head, kindly pardon me for any mistakes and correct me if I'm wrong.
+This is all there is to it. Transforming xor operations to bitwise addition modulo $2$ and, in some cases, vector addition in this way can be helpful in some problems. Let's see one such problem. Before that, let me explain in short what vector space and $\mathbb{Z}\_2^b$ meant earlier. I apologize to any Linear Algebra fans, since I don't want to write formal definitions here to make things look harder than it is. I'll explain the idea of these terms the way I find them in my head, kindly pardon me for any mistakes and correct me if I'm wrong.
 
 $\underline{\text{Vector Space}}$: Just a collection of vectors.
 
