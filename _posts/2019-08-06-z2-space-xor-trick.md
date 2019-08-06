@@ -95,7 +95,9 @@ $$
 
 with the initial value $\text{dp[0][0] = 1}.$ The final answer would be, $\text{dp[n][0]}.$
 
-But, the complexity is $O(n \cdot 2^{19},$ which is way too high :( The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
+But, the complexity is $O(n \cdot 2^{19},$ which is way too high :(
+
+The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
 
 $$
 \text{dp[at][msk] = dp[at - 1][msk] * poss[at][0] + dp[at - 1][msk ^ mask[at]] * poss[at][1]}
