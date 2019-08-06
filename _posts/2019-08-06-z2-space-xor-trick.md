@@ -154,6 +154,7 @@ Let's view some problems now:
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 #### Solution
+
 Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of the set. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $le d = 20$ by property $7.$
 
 #### Reference code
