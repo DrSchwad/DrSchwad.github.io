@@ -74,8 +74,95 @@ Anyways, the problem:
 ### Problem 1 (Division 2 - C)
 ---
 
-> Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
+> Find the number of non-empty subsets, modulo $10^9 + 7,$ of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
 [Link to the source](https://codeforces.com/contest/895/problem/C)
+
+#### Solution
+
+It's obvious that our solution will build on the constraint on $a,$ which is just $70.$
+
+For a number to be square, each of it's prime divisors must have an even exponent in the prime factorization of the number. There are only $19$ primes upto $70.$ So, we can assign a mask of $19$ bits to each array element, denoting if the $i$'th prime occurs odd or even number of times in it by the $i$'th bit of the mask.
+
+So, the problem just boils down to finding out the number of non-empty subsets of this array for which the xor-sum of it's elements' masks will be $0.$
+
+I got stuck here for quite a while ;-; We can try to use dynamic programming, dp[at][msk] states the number of subsets in $\\{a_1, a_2, \ldots, a_{\text{at}}\\}$ such that the xor-sum of it's elements' masks is ```msk```. Then,
+
+$$
+\text{dp[at][msk] = dp[at - 1][msk] + dp[at - 1][msk ^ mask[at]]}
+$$
+
+with the initial value $dp[0][0] = 1.$
+
+But, the complexity is way too high :( The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
+
+$$
+\text{dp[at][msk] = dp[at - 1][msk] * poss[at][0] + dp[at - 1][msk ^ mask[at]] * poss[at][1]}
+$$
+
+where, $\text{poss[at][0]}$ is the number of ways to select even number of array elements with value $\text{at},$ and similarly $\text{poss[at][1]}$ for odd number of elements.
+
+#### Reference Code
+
+{% highlight cpp linenos %}
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+const int N = 1e5 + 10;
+const int MAX_A = 70;
+const int TOTAL_PRIMES = 19;
+const int MOD = 1e9 + 7;
+ 
+int n;
+int poss[MAX_A + 1][2];
+const int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67};
+int mask[MAX_A + 1];
+int dp[MAX_A + 1][1 << TOTAL_PRIMES];
+ 
+int main() {
+	cin >> n;
+ 
+	for (int i = 1; i <= MAX_A; i++) poss[i][0] = 1;
+ 
+	for (int i = 1; i <= n; i++) {
+		int a;
+		scanf("%d", &a);
+ 
+		int tmp = poss[a][0];
+		poss[a][0] = (poss[a][0] + poss[a][1]) % MOD;
+		poss[a][1] = (poss[a][1] + tmp) % MOD;
+	}
+ 
+	for (int i = 1; i <= MAX_A; i++) {
+		for (int p = 0; p < TOTAL_PRIMES; p++) {
+			int cnt = 0;
+			int at = i;
+ 
+			while (at % primes[p] == 0) {
+				at /= primes[p];
+				cnt++;
+			}
+ 
+			if (cnt & 1) mask[i] |= (1 << p);
+		}
+	}
+ 
+	int max_mask = 1 << TOTAL_PRIMES;
+	dp[0][0] = 1;
+	
+	for (int at = 1; at <= MAX_A; at++)
+		for (int msk = 0; msk < max_mask; msk++) {
+			dp[at][msk] = dp[at - 1][msk] * 1LL * poss[at][0] % MOD;
+ 
+			dp[at][msk] += dp[at - 1][msk ^ mask[at]] * 1LL * poss[at][1] % MOD;
+			dp[at][msk] %= MOD;
+		}
+ 
+	cout << (dp[MAX_A][0] + MOD - 1) % MOD << endl;
+ 
+	return 0;
+}
+{% endhighlight %}
 
 ---
 
