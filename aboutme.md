@@ -4,13 +4,12 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+If you actually cared enough to click on this link, here are a few random facts about me:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+- I'm short
+- I wish I was taller
+- I like competitive programming quite a lot
+- I wish I started it earlier at high school
+- I skipped grade 3
+- I want to dye my hair white
+- Too scared to do it
