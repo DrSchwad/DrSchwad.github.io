@@ -12,7 +12,7 @@ published: true
 ---
 Working on it!
 $$
-begin{equation}\begin{array}{c}
+begin{equation}\begin{array}
 \phantom{\times99}384\\
 \underline{\times\phantom{999}56}\\
 \phantom{\times9}2304\\
