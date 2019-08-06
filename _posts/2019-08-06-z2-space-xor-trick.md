@@ -202,7 +202,7 @@ With just these few properties, we can experience some awesome solutions to a fe
 ---
 
 > This algorithm extensively uses properties $1, 2, 3$ and $4,$ and also the rest in the background. All the vectors here belong to $\mathbb{Z}\_2^d,$ so they are representable by a bitmask of length $d.$  
-Suppose at each step, we're taking an input vector $\vec{v_i}$ and we already have a basis of the previously taken vectors $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_{i - 1}},$ and we need to update the basis such that it can also represent the new vector $vec{v_i}.$  
+Suppose at each step, we're taking an input vector $\vec{v_i}$ and we already have a basis of the previously taken vectors $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_{i - 1}},$ and now we need to update the basis such that it can also represent the new vector $\vec{v_i}.$  
 In order to do that, we first need to check if $vec{v_i}$ is representable using our current basis. If it is, then this basis is enough and we don't need to do anything. But if it's not, then we just add this vector $vec{v_i}$ to the set of basis.  
 So the only difficuly is, to efficiently check whether the new vector is representable by the basis or not. In order facilitate that, we use property $1$ before inserting any new vectors in the basis, to slightly modify it, without causing any harm to the basis. This way, we can have more control over the form of our basis vectors. So here's the plan:  
 Let, $f(\vec{v})$ be the first position in it's binary notation, where the bit is set. We make sure that all the basis vectors' each have a different $f$ value.  
