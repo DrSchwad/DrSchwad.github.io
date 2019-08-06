@@ -14,7 +14,7 @@ published: true
 
 I'm very excited about this blog, as it took me quite a lot of effort and scavenging through the internet to completely grasp the concept of this technique(That's probably because I have almost zero knowledge in Linear Algebra or I'm just plain dumb). So I feel like I genuinely conquered a challenge, and I really want to share it with someone. But there's no way my CP friends circle will believe it, they'll think I'm just trying to show off :P
 
-So here I am, sharing it on CF. I also created a [personal blog](https://drschwad.github.io/), so that if I ever feel like sharing something again(not only about CP), I can write a blog there. I also added this same post [there](https://drschwad.github.io/2019-08-06-z2-space-xor-trick/), you can read it there if you prefer dark theme. I'll be pleased to hear any thoughts on the blog or if I can improve it in some way ^\_^
+That's why I created this blog, so that if I ever feel like sharing something again(not only about CP), I can write a post here. I'll be pleased to hear any thoughts on the blog or if I can improve it in some way ^\_^
 
 ## Introduction
 
@@ -378,6 +378,7 @@ A bit like the previous one. For query type $2,$ again we'll iterate through the
 Suppose $\vec{b_h}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b_h})$'th bit of ```answer``` to $0.$ Otherwise we set it to $1$ and subtract $\frac{2^\text{basis size}}{2}$ from $k.$ Then we move on to the next basis vector and continue. In the end $k$ will be $1$ and we'll get our answer by setting $0$ in ```answer``` for all $f(\vec{b_i})$'th bits from that point forward.
 
 #### Reference Code
+
 {% highlight cpp linenos %}
 #include <bits/stdc++.h>
  
@@ -453,6 +454,7 @@ Then, iterate through the queries. To answer a query, we check if $x$ is actuall
 If it's not representable, then the answer to the query is $0.$ If it is representable, then the answer will be $2^(l - b),$ where $b$ is the basis size for the first $l$ elements. It is so, because for each subset of the $(l - b)$ non-basis vectors in the prefix, we find a unique linear combination to yield xor-sum $x.$
 
 #### Reference Code
+
 {% highlight cpp linenos %}
 #include <bits/stdc++.h>
  
@@ -612,9 +614,9 @@ int main() {
 
 ## Conclusion
 
-This is my first take on writing tutorial blogs on CF. I hope it'll be of use to the community.
-
 I apologize for my terrible Linear Algebra knowledge. I would write this blog without using any of it if I could. I don't want to spread any misinformation. So please let me know in comments if you find any mistakes/wrong usage of notations.
+
+I plan to write on Hungarian Algorithm next. There's just so many prerequisites to this algorithm. It'll be an enjoyable challenge to write about. I'd be glad if you can provide me some resource links in the comments to learn it from, though I already have quite a few.
 
 ## References:
 
