@@ -182,7 +182,7 @@ $\underline{\text{Basis of a Vector Space:}}$ A set of vectors is called a basis
 
 A few important properties of independent vectors and vector basis that we will need later on(I find these pretty intuitive, so I didn't bother with reading any formal proofs. Let me know in the comments if you need any help):
 
-1. For a set of independent vectors, we can replace any one of them with any linear combination of all of them. What's more fascinating is that, the set of vectors in the space representable as a linear combination of this independent set stays exactly the same with the new independent set of vectors.
+1. For a set of independent vectors, we can change any of these vectors by adding to it any linear combination of all of them, and the vectors will still stay independent. What's more fascinating is that, the set of vectors in the space representable by some linear combination of this independent set stays exactly the same after the change.
 
 2. Notice that, in case of $\mathbb{Z}\_2^b$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ So, to iterate all the linear combinations of some set of vectors, you just take an element vector or don't take it in the combination, there's no in-between.
 
