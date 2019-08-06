@@ -97,7 +97,7 @@ with the initial value $\text{dp[0][0] = 1}.$ The final answer would be, $\text{
 
 But, the complexity is $O(n \cdot 2^{19}),$ which is way too high :(
 
-The thing to notice here, is that, even if $n \le 10^5,$ the actual number of different possible $a_i$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
+The thing to notice here, is that, even if $n \le 10^5,$ the actual number of different possible $a_i$ is just $70.$ So, if we find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
 
 $$
 \text{dp[at][msk] = dp[at - 1][msk] * poss[at][0] + dp[at - 1][msk ^ mask[at]] * poss[at][1]}
@@ -180,7 +180,7 @@ $\underline{\text{Independent Vectors:}}$ A set of vectors $\vec{v_1}, \vec{v_2}
 
 $\underline{\text{Basis of a Vector Space:}}$ A set of vectors is called a basis of a vector space, if all of the element vectors of that space can be written _uniquely_ as the sum of a linear combination of elements of that basis.
 
-A few important properties of independent vectors and vector basis that we will need later on(I find these pretty intuitive, so I didn't bother with reading any formal proofs. Let me know if you're finding them hard to digest):
+A few important properties of independent vectors and vector basis that we will need later on(I find these pretty intuitive, so I didn't bother with reading any formal proofs. Let me know in the comments if you need any help):
 
 1. For a set of independent vectors, we can replace any one of them with a linear combination of them all. What's more fascinating is that, the set of vectors in the space representable as a linear combination of this independent set stays exactly the same with the new independent set of vectors.
 
