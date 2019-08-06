@@ -375,7 +375,7 @@ Type $2$: Given $k,$ print the $k$'th hightest number from $X.$ It's guaranteed 
 #### Solution
 
 A bit like the previous one. For query type $2,$ again we'll iterate through the basis vectors according to their decreading order of $f$ values.  
-Suppose $\vec{b_h}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b})$'th bit of ```answer``` to $0.$ Otherwise we set it to $1$ and subtract $\frac{2^\text{basis size}}{2}$ from $k.$ Then we move on to the next basis vector and continue, in the end $k$ will be $1$ and we'll get our answer by setting $0$ in ```answer``` for all $f(\vec{b_i})$'th bits from that point.
+Suppose $\vec{b_h}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b_h})$'th bit of ```answer``` to $0.$ Otherwise we set it to $1$ and subtract $\frac{2^\text{basis size}}{2}$ from $k.$ Then we move on to the next basis vector and continue. In the end $k$ will be $1$ and we'll get our answer by setting $0$ in ```answer``` for all $f(\vec{b_i})$'th bits from that point forward.
 
 #### Reference Code
 {% highlight cpp linenos %}
@@ -445,6 +445,71 @@ int main() {
 > You're given an array $1 \le a_i \lt 2^{20}$ of length $1 \le n \le 10^5.$ You have to answer $1 \le q \le 10^5$ queries.  
 In each query you'll be given two integers $1 \le l \le n$ and $0 \le x \lt 2^{20}.$ Find the number of subsequences of the first $l$ elements of the array, modulo $10^9 + 7,$ such that their bitwise-xor sum is $x.$  
 [Link to the source](https://codeforces.com/contest/959/problem/F)
+
+#### Solution
+
+A bit like the previous one. For query type $2,$ again we'll iterate through the basis vectors according to their decreading order of $f$ values.  
+Suppose $\vec{b_h}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b_h})$'th bit of ```answer``` to $0.$ Otherwise we set it to $1$ and subtract $\frac{2^\text{basis size}}{2}$ from $k.$ Then we move on to the next basis vector and continue. In the end $k$ will be $1$ and we'll get our answer by setting $0$ in ```answer``` for all $f(\vec{b_i})$'th bits from that point forward.
+
+#### Reference Code
+{% highlight cpp linenos %}
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+const int N = 1e6 + 10, LOG_K = 30;
+ 
+int basis[LOG_K], sz;
+ 
+void insertVector(int mask) {
+	for (int i = LOG_K - 1; i >= 0; i--) {
+		if ((mask & 1 << i) == 0) continue;
+ 
+		if (!basis[i]) {
+			basis[i] = mask;
+			sz++;
+ 
+			return;
+		}
+ 
+		mask ^= basis[i];
+	}
+}
+ 
+int query(int k) {
+	int mask = 0;
+ 
+	int tot = 1 << sz;
+	for (int i = LOG_K - 1; i >= 0; i--)
+		if (basis[i]) {
+			int low = tot / 2;
+ 
+			if ((low < k && (mask & 1 << i) == 0) ||
+				(low >= k && (mask & 1 << i) > 0)) mask ^= basis[i];
+ 
+			if (low < k) k -= low;
+ 
+			tot /= 2;
+		}
+ 
+	return mask;
+}
+ 
+int main() {
+	int n;
+	cin >> n;
+ 
+	while (n--) {
+		int t, k;
+		scanf("%d %d", &t, &k);
+ 
+		if (t == 1) insertVector(k);
+		else printf("%d\n", query(k));
+	}
+ 
+	return 0;
+}
+{% endhighlight %}
 
 ---
 
