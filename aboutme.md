@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: A whole page just about me
 ---
 
 If you actually cared enough to click on this link, here are a few random facts about me:
