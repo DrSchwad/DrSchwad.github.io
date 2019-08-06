@@ -155,9 +155,9 @@ Let's view some problems now:
 
 #### Solution
 
-Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of the set. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $le d = 20$ by property $7.$
+Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of the set. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $\le d = 20$ by property $7.$
 
-#### Reference code
+#### Reference Code
 
 {% highlight cpp linenos %}
 #include <bits/stdc++.h>
@@ -210,6 +210,65 @@ int main() {
 > What is the maximum possible xor for the elements of a subset from a given set?  
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
+#### Solution
+
+In this problem, we need to slightly alter the definition of $f(\vec{b}).$ Instead of $f$ being the first position with a set bit, let it be the last position with a set bit.
+
+Now, to get the maximum, we initialize our ```answer``` at 0 and we start iterating the basis vectors starting with the one that has the highest value of $f.$
+
+Suppose, we're at base vector $\vec{b}$ and we find that ```answer``` doesn't have the $f(\vec{b})$'th bit set, then we add $\vec{b}$ with ```answer```. This greedy solution works because $f(\vec{b})$ is the most significant bit at the moment, and we must set it; doesn't matter if all the following bits turn to $0.$
+
+#### Reference Code
+
+{% highlight cpp linenos %}
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+const int N = 1e5 + 10, LOG_A = 20;
+
+int basis[LOG_A];
+
+void insertVector(int mask) {
+	for (int i = LOG_A - 1; i >= 0; i--) {
+		if ((mask & 1 << i) == 0) continue;
+
+		if (!basis[i]) {
+			basis[i] = mask;
+			return;
+		}
+
+		mask ^= basis[i];
+	}
+}
+
+int main() {
+	int n;
+	cin >> n;
+
+	while (n--) {
+		int a;
+		scanf("%d", &a);
+
+		insertVector(a);
+	}
+
+	int ans = 0;
+
+	for (int i = LOG_A - 1; i >= 0; i--) {
+		if (!basis[i]) continue;
+
+		if (ans & 1 << i) continue;
+
+		ans ^= basis[i];
+	}
+
+	cout << ans << endl;
+
+	return 0;
+}
+{% endhighlight %}
+
 ---
 
 ### Problem 4 (1st Hunger Games - S)
@@ -219,6 +278,70 @@ int main() {
 Type $1$: Insert an element $1 \le k \le 10^9$ to the set(If it's already in the set, do nothing)  
 Type $2$: Given $k,$ print the $k$'th hightest number from $X.$ It's guaranteed that $k \le \mid X \mid.$
 [Link to the source](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/S)
+
+#### Solution
+
+A bit like the previous one. For query type $2,$ again we'll iterate through the basis vectors according to their decreading order of $f$ values. Suppose $\vec{b}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b})$'th bit of ```answer``` to $0$ and otherwise to $1.$
+
+#### Reference Code
+{% highlight cpp linenos %}
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+const int N = 1e6 + 10, LOG_K = 30;
+ 
+int basis[LOG_K], sz;
+ 
+void insertVector(int mask) {
+	for (int i = LOG_K - 1; i >= 0; i--) {
+		if ((mask & 1 << i) == 0) continue;
+ 
+		if (!basis[i]) {
+			basis[i] = mask;
+			sz++;
+ 
+			return;
+		}
+ 
+		mask ^= basis[i];
+	}
+}
+ 
+int query(int k) {
+	int mask = 0;
+ 
+	int tot = 1 << sz;
+	for (int i = LOG_K - 1; i >= 0; i--)
+		if (basis[i]) {
+			int low = tot / 2;
+ 
+			if ((low < k && (mask & 1 << i) == 0) ||
+				(low >= k && (mask & 1 << i) > 0)) mask ^= basis[i];
+ 
+			if (low < k) k -= low;
+ 
+			tot /= 2;
+		}
+ 
+	return mask;
+}
+ 
+int main() {
+	int n;
+	cin >> n;
+ 
+	while (n--) {
+		int t, k;
+		scanf("%d %d", &t, &k);
+ 
+		if (t == 1) insertVector(k);
+		else printf("%d\n", query(k));
+	}
+ 
+	return 0;
+}
+{% endhighlight %}
 
 ---
 
