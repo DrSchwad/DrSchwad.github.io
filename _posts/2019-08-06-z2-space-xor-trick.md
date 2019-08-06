@@ -213,25 +213,25 @@ But, if $f(\vec{v_i}) == f(\vec{b_1}),$ then we must subtract $\vec{b_1}$ from $
 Note that, by changing the value of $\vec{v_i}$ we're not causing any problem according to property $1.$ $\vec{v_i}$ and $\vec{v_i} - \vec{b_1}$ is of same use to us. If in some later step we find out $\vec{v_i}$ is actually not representable by the current basis, we can still just insert it's changed value in the basis, since the set of vectors in the space representable by this new basis would've been the same if we inserted the original $\vec{v_i}$ instead.  
 If, after iterating through all the basis vector $\vec{b}$'s and subtracting them from $\vec{v_i}$ if needed, we still find out that $\vec{v_i}$ is not null vector, it means that the new changed $\vec{v_i}$ has a larger value of $f$ than all other basis vectors. So we have to insert it into the basis and keep a record of it's $f$ value.
 
-Here's the implementation, the vectors being represented by bitmasks:
+Here's the implementation, the vectors being represented by bitmasks of length $d$:
 
 {% highlight cpp linenos %}
-int basis[b]; // basis[i] keeps the index of the vector whose f value is i
+int basis[d]; // basis[i] keeps the index of the vector whose f value is i
 
 int sz; // Current size of the basis
 
 void insertVector(int mask) {
-	for (int i = 0; i < b; i++) {
-		if ((mask & 1 << i) == 0) continue; // i != f(mask), so continue
+	for (int i = 0; i < d; i++) {
+		if ((mask & 1 << i) == 0) continue; // continue if i != f(mask)
 
-		if (!basis[i]) { // If there is no basis vector with the i'th bit set, then insert mask into the basis
+		if (!basis[i]) { // If there is no basis vector with the i'th bit set, then insert this vector into the basis
 			basis[i] = mask;
 			++sz;
 			
 			return;
 		}
 
-		mask ^= basis[i]; // Otherwise subtract the basis vector from mask
+		mask ^= basis[i]; // Otherwise subtract the basis vector from this vector
 	}
 }
 {% endhighlight %}
