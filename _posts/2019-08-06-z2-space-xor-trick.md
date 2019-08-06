@@ -61,16 +61,17 @@ An interesting thing happens here, if we add the two position vectors, the corre
 
 This is all there is to it. Transforming xor operations to bitwise addition modulo $2$ and, in some cases, vector addition in this way can be helpful in some problems. Let's see one such problem. Before that, let me explain in short what vector space and $\mathbb{Z}\_2^b$ meant earlier. I apologize to any Linear Algebra fans, since I don't want to give formal definitions here to make things look harder than it is. I'll explain the idea of these terms the way I find them in my head, kindly pardon me for any mistakes and correct me if I'm wrong.
 
-**Vector Space:** Just a collection of vectors.
+**$\underline{\text{Vector Space}}$:** Just a collection of vectors.
 
-**$\mathbb{Z\_2}$:** $\mathbb{Z\_m}$ is the set of remainders upon division by $m.$ So, $\mathbb{Z\_2}$ is simply the set ${0, 1},$ since these are the only remainders possible when taken modulo $2.$
+**$\underline{\mathbb{Z\_2}}$:** $\mathbb{Z\_m}$ is the set of remainders upon division by $m.$ So, $\mathbb{Z\_2}$ is simply the set ${0, 1},$ since these are the only remainders possible when taken modulo $2.$
 
-**$\mathbb{Z\_2^b}$:** A $b-$dimensional vector space consisting of all the different position vectors that consists of $b$ coordinates, all coordinates being elements of $\mathbb{Z\_2}.$ For example, earlier our custom cartesian plane was a two-dimensional one. So, it was $\mathbb{Z\_2^2}.$ $\mathbb{Z\_2^3}$ would be a small $3d-$plane with only $2^3 = 8$ points, all coordinates taken modulo $2.$
+**$\underline{\mathbb{Z\_2^b}}$:** A $b-$dimensional vector space consisting of all the different position vectors that consists of $b$ coordinates, all coordinates being elements of $\mathbb{Z\_2}.$ For example, earlier our custom cartesian plane was a two-dimensional one. So, it was $\mathbb{Z\_2^2}.$ $\mathbb{Z\_2^3}$ would be a small $3d-$plane with only $2^3 = 8$ points, all coordinates taken modulo $2.$
 
 So, the problem:
 
 ### Problem 1 ###
 ---
+
 > Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.
 [Link to the problem](https://codeforces.com/contest/895/problem/C)
 
