@@ -11,11 +11,9 @@ comments: true
 published: true
 ---
 Working on it!
-
-$$
-\begin{equation*}\begin{array}{r}
-1010\\
-\underline{\oplus\;1100}\\
-0110
-\end{array}\end{equation*}
-$$
+|  Bit no.  | First number | Second number | $\oplus$ | Sum | Sum taken $\pmod 2$ |
+|:---------:|:------------:|:-------------:|:--------:|:---:|:-------------------:|
+| $1$st bit |      $0$     |      $0$      |    $0$   | $0$ |         $0$         |
+| $2$nd bit |      $1$     |      $0$      |    $1$   | $1$ |         $1$         |
+| $3$rd bit |      $0$     |      $1$      |    $1$   | $1$ |         $1$         |
+| $4$th bit |      $1$     |      $1$      |    $0$   | $2$ |         $0$         |
