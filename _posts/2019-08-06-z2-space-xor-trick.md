@@ -1,9 +1,9 @@
 ---
 layout: post
-title: A Beautiful Adhoc Technique for XOR Problems
+title: A Beautiful Technique for XOR Problems
 subtitle: >-
-  A nice idea to view xor in terms of addition in $Z_2$ and use linear algebra
-  that cracks quite a few problems
+  A nice idea to view xor in terms of addition in $\mathbb{Z}_2$ and use linear
+  algebra that cracks quite a few problems
 tags:
   - Linear Algebra
 comments: true
