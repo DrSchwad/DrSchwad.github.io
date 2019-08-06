@@ -42,7 +42,7 @@ $$
 \end{array}\end{equation*}
 $$
 
-Now, compare for each corresponding pair of bits in the two numbers, compare the result of their xor with the result of their sum taken modulo $2$:
+Now, for each corresponding pair of bits in the two numbers, compare the result of their xor with the result of their sum taken modulo $2$:
 
 |  Bit no.  | First number | Second number | $\oplus$ | Sum | Sum taken $\pmod 2$ |
 |:---------:|:------------:|:-------------:|:--------:|:---:|:-------------------:|
