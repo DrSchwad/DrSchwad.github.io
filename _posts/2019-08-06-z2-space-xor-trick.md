@@ -81,21 +81,21 @@ If you'd like to solve the problem first, then kindly pause and try it before re
 
 #### Solution
 
-It's obvious that our solution will build on the constraint on $a,$ which is just $70.$
+It's obvious that our solution will build on the constraint on $a_i,$ which is just $70.$
 
 For a number to be square, each of it's prime divisors must have an even exponent in the prime factorization of the number. There are only $19$ primes upto $70.$ So, we can assign a mask of $19$ bits to each array element, denoting if the $i$'th prime occurs odd or even number of times in it by the $i$'th bit of the mask.
 
 So, the problem just boils down to finding out the number of non-empty subsets of this array for which the xor-sum of it's elements' masks will be $0.$
 
-I got stuck here for quite a while ;-; We can try to use dynamic programming, dp[at][msk] states the number of subsets in $\\{a_1, a_2, \ldots, a_{\text{at}}\\}$ such that the xor-sum of it's elements' masks is ```msk```. Then,
+I got stuck here for quite a while ;-; We can try to use dynamic programming, $\text{dp[at][msk]}$ states the number of subsets in $\\{a_1, a_2, \ldots, a_{\text{at}}\\}$ such that the xor-sum of it's elements' masks is $\text{msk}.$ Then,
 
 $$
 \text{dp[at][msk] = dp[at - 1][msk] + dp[at - 1][msk ^ mask[at]]}
 $$
 
-with the initial value $dp[0][0] = 1.$
+with the initial value $\text{dp[0][0] = 1}.$ The final answer would be, $\text{dp[n][0]}.$
 
-But, the complexity is way too high :( The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
+But, the complexity is $O(n \cdot 2^{19},$ which is way too high :( The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
 
 $$
 \text{dp[at][msk] = dp[at - 1][msk] * poss[at][0] + dp[at - 1][msk ^ mask[at]] * poss[at][1]}
