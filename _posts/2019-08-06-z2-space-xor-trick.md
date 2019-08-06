@@ -12,11 +12,11 @@ published: true
 ---
 Working on it!
 $$
-begin{equation*}\begin{array}{c}
+begin{equation}\begin{array}{c}
 \phantom{\times99}384\\
 \underline{\times\phantom{999}56}\\
 \phantom{\times9}2304\\
 \underline{\phantom\times1920\phantom9}\\
 \phantom\times21504
-\end{array}\end{equation*}
+\end{array}\end{equation}
 $$
