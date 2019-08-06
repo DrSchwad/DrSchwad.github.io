@@ -614,7 +614,7 @@ int main() {
 
 This is my first take on writing tutorial blogs on CF. I hope it'll be of use to the community.
 
-I apologize for my terrible Linear Algebra knowledge. I would write this blog without using any of it if I could. I don't want to spread any misinformation. So please let me know in comments if you find any mistakes.
+I apologize for my terrible Linear Algebra knowledge. I would write this blog without using any of it if I could. I don't want to spread any misinformation. So please let me know in comments if you find any mistakes/wrong usage of notations.
 
 ## References:
 
