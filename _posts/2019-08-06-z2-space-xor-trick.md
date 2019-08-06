@@ -196,10 +196,10 @@ Print $-1$ if no suitable partition exists.
 
 ## References:
 
-1. https://codeforces.com/blog/entry/60003
+1. [2 Special cases of Gaussian [Tutorial] by AJ_Coder](https://codeforces.com/blog/entry/60003)
 
-2. https://codeforces.com/blog/entry/48417?locale=en
+2. [General ideas by adamant](https://codeforces.com/blog/entry/48417?locale=en)
 
-3. https://codeforces.com/blog/entry/64483?#comment-510750
+3. [Helpful comments for Problem 6 by mohamedeltair](https://codeforces.com/blog/entry/64483?#comment-510750)
 
-4. https://codeforces.com/blog/entry/58712?#comment-423243
+4. [Solution idea using this trick to Problem 5 by loomas](https://codeforces.com/blog/entry/58712?#comment-423243)
