@@ -73,7 +73,7 @@ So, the problem:
 ---
 
 > Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
-[Link to the problem](https://codeforces.com/contest/895/problem/C)
+[Link to the source](https://codeforces.com/contest/895/problem/C)
 
 ---
 
@@ -118,7 +118,8 @@ Let, $f(\vec{v})$ be the first position in it's binary notation, where the bit i
 Here's how we do it. Initially, there's no vector in the basis, so we're fine, there's no $f$ value to collide with each other. Now, suppose we're at the $i$'th step, and we're checking if vector $\vec{v_i}$ is representable by the basis or not. Since, all of our basis have a different $f$ value, take the one with the lease $f$ value among them, let's call this basis vector $\vec{b_1}.$  
 If $f(\vec{v_i}) < f(\vec{b_1})$ then no matter how we take the linear combination, by property $2,$ no linear combination of the basis vectors' can have $1$ at $f(\vec{v_i}).$ So, it'll be a new basis vector, and since it's $f$ is already different from the rest of the basis vectors, we can insert it into the set as is and keep a record of it's $f$ value.
 But, if $f(\vec{v_i}) == f(\vec{b_1}),$ then we must take $\vec{b_1}$ if we want to represent $\vec{v_i}$ by a linear combination, since no other basis vector has $1$ at $f(\vec{v_i}) = f(\vec{b_1}).$ So, we delete $\vec{b_1}$ from $\vec{v_i}$ and move on to $\vec{b_2}.$ Notice that, by changing the value of $\vec{v_i}$ no harm is being done if in some later step we find out $\vec{v_i}$ is actually not representable, we can still insert it with it's new value according to property $1.$
-If, after iterating through all the basis vector $\vec{b}$'s and subtracting them from $\vec{v_i}$ when needed, we still find out that $\vec{v_i}$ is not null vector, it means that the new $\vec{v_i}$ has a larger value of $f$ than all other basis vectors. So we insert it into the basis and keep a record of it's $f$ value.  
+If, after iterating through all the basis vector $\vec{b}$'s and subtracting them from $\vec{v_i}$ when needed, we still find out that $\vec{v_i}$ is not null vector, it means that the new $\vec{v_i}$ has a larger value of $f$ than all other basis vectors. So we insert it into the basis and keep a record of it's $f$ value.
+
 Here's the implementation, the vectors being represented by bitmasks:
 
 {% highlight cpp linenos %}
@@ -145,3 +146,19 @@ void insertVector(int mask) {
 ---
 
 Let's view some problems now:
+
+### Problem 2
+---
+
+> Given a set S of size N, find the number of distinct integers that can be represented using xor over the set of the given elements.  
+[Link to the source](https://codeforces.com/blog/entry/60003)
+
+---
+
+### Problem 3
+---
+
+> What is the maximum possible xor you can have using a subset of a given set?  
+[Link to the source](https://codeforces.com/blog/entry/60003)
+
+---
