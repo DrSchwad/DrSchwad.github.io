@@ -73,8 +73,7 @@ So, the problem:
 ---
 
 > Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
-
-[Link to the source](https://codeforces.com/contest/895/problem/C)
+[Link to the problem](https://codeforces.com/contest/895/problem/C)
 
 ---
 
@@ -84,3 +83,20 @@ Since the number of different possible masks were just $70$ in the previous prob
 
 ## Part 2: Bringing in Vector Basis
 
+We need a couple of definitions now to move forward. All the vectors mentioned in what follows, exclude null vectors. I sincerely apologize for being so informal with these definitions.
+
+$\underline{\text{Independent Vectors:}}$ A set of vectors $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_n}$ is called independent, if none of them can be written as the sum of a linear combination of the rest.
+
+$\underline{\text{Basis of a Vector Space:}}$ A set of vectors is called a basis of a vector space, if all of the element vectors of that space can be written _uniquely_ as the sum of a linear combination of elements of that basis.
+
+A few important properties of independent vectors and vector basis that we will need later on:
+
+- For a set of independent vectors, we can replace any one of them with a linear combination of them all. What's more fascinating is that, the set of vectors in the space representable as a linear combination of this independent set stays exactly the same with the new independent set of vectors.
+
+- The basis is actually the smallest sized set such that all other vectors are representable using just the element vectors of that set.
+
+- The basis vectors are independent.
+
+- For any set with smaller number of independent vectors than the basis, not all of the vectors in the space will be representable.
+
+- And for any set with larger number of independent vectors, even if all of the vectors in that space can be represented using it's element vectors, the representation will not be unique.
