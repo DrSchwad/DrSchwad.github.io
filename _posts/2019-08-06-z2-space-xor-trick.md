@@ -23,14 +23,14 @@ Since it concerns Linear Algebra, there needs to be a lot of formal stuff going 
 Now, the problems that can be solved using this technique are actually not much hard to identify. The most common scenario involves: you'll be given an array of numbers, and then the problem asks for an answer by considering all the xor-sums of the numbers in all possible subsets of the array. This technique can also be used in some online-query problems: the problem can provide queries of first type instructing you to insert numbers in the array(_without removal_, I don't know how to solve with deletion of elements) and in-between those queries, asking for answers in separate queries of second type.
 
 The whole technique can be divided into two main parts, some problems can even be solved by using only the first part(Don't worry if you don't understand them completely now, I explain them in details right below):
-1. Represent each given number in it's binary form and consider it as a vector in the $\mathbb{Z}\_2^b$ vector space, where $b$ is the maximum possible number of bits. Then, xor of some of these numbers is equivalent to addition of the corresponding vectors in the vector space.
+1. Represent each given number in it's binary form and consider it as a vector in the $\mathbb{Z}\_2^d$ vector space, where $d$ is the maximum possible number of bits. Then, xor of some of these numbers is equivalent to addition of the corresponding vectors in the vector space.
 2. Somehow, relate the answer to the queries of second type with the basis of the vectors found in Part 1.
 
 PS: Does anyone know any name for this technique? I'm feeling awkward referring to it as 'technique' this many times :P If it's not named yet, how about we name it something?
 
-## Part 1: Relating XOR with Vector Addition in $\mathbb{Z}\_2^b$
+## Part 1: Relating XOR with Vector Addition in $\mathbb{Z}\_2^d$
 
-Let me explain the idea in plain English first, then we'll see what the $\mathbb{Z}\_2^b$ and vector space means. I'm sure most of you have already made this observation by yourselves at some point.
+Let me explain the idea in plain English first, then we'll see what the $\mathbb{Z}\_2^d$ and vector space means. I'm sure most of you have already made this observation by yourselves at some point.
 
 Suppose, we're xor-ing the two numbers $2$ and $3.$ Let's do it below:
 
