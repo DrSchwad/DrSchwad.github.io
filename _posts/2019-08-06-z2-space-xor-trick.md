@@ -71,10 +71,10 @@ So, the problem:
 
 ### Problem 1 ###
 ---
-
-> Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.
+```
+Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.
 [Link to the problem](https://codeforces.com/contest/895/problem/C)
-
+```
 ---
 
 If you'd like to solve the problem first, then pause and try it before reading on further.
