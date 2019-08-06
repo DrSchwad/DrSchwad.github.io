@@ -77,6 +77,8 @@ Anyways, the problem:
 > Find the number of non-empty subsets, modulo $10^9 + 7,$ of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
 [Link to the source](https://codeforces.com/contest/895/problem/C)
 
+If you'd like to solve the problem first, then kindly pause and try it before reading on further.
+
 #### Solution
 
 It's obvious that our solution will build on the constraint on $a,$ which is just $70.$
@@ -165,8 +167,6 @@ int main() {
 {% endhighlight %}
 
 ---
-
-If you'd like to solve the problem first, then kindly pause and try it before reading on further.
 
 Since the number of different possible masks were just $70$ in the previous problem, we had been able to use dynamic programming for checking all possible xors. But what if the constraint was much bigger, say $10^5.$ That is when we can use Part $2$ of this technique, which, in some cases, works even when the queries are online.
 
