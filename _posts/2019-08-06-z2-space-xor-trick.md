@@ -192,3 +192,13 @@ Print $-1$ if no suitable partition exists.
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 ---
+
+## References:
+
+1. https://codeforces.com/blog/entry/60003
+
+2. https://codeforces.com/blog/entry/48417?locale=en
+
+3. https://codeforces.com/blog/entry/64483?#comment-510750
+
+4. https://codeforces.com/blog/entry/58712?#comment-423243
