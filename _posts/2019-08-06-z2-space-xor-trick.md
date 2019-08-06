@@ -67,7 +67,9 @@ $\underline{\mathbb{Z\_2}}$: $\mathbb{Z\_m}$ is the set of remainders upon divis
 
 $\underline{\mathbb{Z\_2^b}}$: A $b-$dimensional vector space consisting of all the different position vectors that consists of $b$ coordinates, all coordinates being elements of $\mathbb{Z\_2}.$ For example, earlier our custom cartesian plane was a two-dimensional one. So, it was $\mathbb{Z\_2^2}.$ $\mathbb{Z\_2^3}$ would be a small $3d-$plane with only $2^3 = 8$ points, all coordinates taken modulo $2.$
 
-So, the problem:
+So, what we've seen is that the xor-operation is equivalent to vector addition in a $\mathbb{Z}\_2^b$ vector space. See how unnecessarily intimidating this simple idea sounds when written in formal math!
+
+Anyways, the problem:
 
 ### Problem 1 (Division 2 - C)
 ---
