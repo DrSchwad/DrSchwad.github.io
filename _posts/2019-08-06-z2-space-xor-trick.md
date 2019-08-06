@@ -162,3 +162,33 @@ Let's view some problems now:
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 ---
+
+### Problem 4
+---
+
+> We have an empty set $S$ and we are to do $1 \le n \le 10^6$ queries on it. Let, $X$ denote the set of all possible xor-sums of elements from a subset of $S.$ There are two types of queries.  
+Type $1$: Insert an element $1 \le k \le 10^9$ to the set(If it's already in the set, do nothing)  
+Type $2$: Given $k,$ print the $k$'th hightest number from $X.$ It's guaranteed that $k \le \mid X \mid.$
+[Link to the source](https://codeforces.com/group/qcIqFPYhVr/contest/203881/problem/S)
+
+---
+
+### Problem 5
+---
+
+> You're given an array $1 \le a_i \lt 2^{20}$ of length $1 \le n \le 10^5.$ You have to answer $1 \le q \le 10^5$ queries, in each query you'll be given two integers $1 \le l \le n$ and $0 \le x \lt 2^{20}.$ Find the number of subsequences of the first $l$ elements of the array, modulo $10^9 + 7,$ such that their bitwise-xor sum is $x.$  
+[Link to the source](https://codeforces.com/contest/959/problem/F)
+
+---
+
+### Problem 6
+---
+
+> You are given an array $0 \le a_i \le 10^9$ of $1 \le n \le 2 \cdot 10^5$ integers. You have to find the maximum number of segments this array can be partitioned into, such that  
+    1. Each element is contained in exactly one segment  
+    2. Each segment contains at least one element  
+    3. There doesn't exist a non-empty subset of segments such that bitwise-xor of the numbers from them is equal to $0$  
+Print $-1$ if no suitable partition exists.
+[Link to the source](https://codeforces.com/blog/entry/60003)
+
+---
