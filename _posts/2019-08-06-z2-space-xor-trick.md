@@ -186,7 +186,7 @@ A few important properties of independent vectors and vector basis that we will 
 
 2. Notice that, in case of $\mathbb{Z}\_2^b$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ Which means that, an element vector can either stay or not stay in a linear combination, there's no in-between.
 
-3. The basis is actually the smallest sized set such that all other vectors in the vector space are representable using by a linear combination of just the element vectors of that set.
+3. The basis is actually the smallest sized set such that all other vectors in the vector space are representable by a linear combination of just the element vectors of that set.
 
 4. The basis vectors are independent.
 
