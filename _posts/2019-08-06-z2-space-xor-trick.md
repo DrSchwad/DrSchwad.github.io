@@ -15,7 +15,7 @@ Working on it!
 $$
 \begin{equation*}\begin{array}{r}
 1010\\
-\underline{\oplus 1100}\\
+\underline{\bigoplus 1100}\\
 0110
 \end{array}\end{equation*}
 $$
