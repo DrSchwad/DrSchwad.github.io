@@ -806,3 +806,16 @@ pre {
   /* font-style: italic; */
   font-size: 16px;
 }
+
+/* Images page */
+
+p.precious_image {
+  width: 100%;
+  text-align: center;
+}
+img.precious_image {
+  max-width: 80%;
+  max-height: 600px;
+  border-radius: 5px;
+  border: 1px solid #E5E5E5;
+}
