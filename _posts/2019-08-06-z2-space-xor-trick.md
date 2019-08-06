@@ -192,7 +192,7 @@ A few important properties of independent vectors and vector basis that we will 
 
 5. For any set with smaller number of independent vectors than the basis, not all of the vectors in the space will be representable.
 
-6. And for any set with larger number of independent vectors, even if all of the vectors in that space can be represented using it's element vectors, the representation will not be unique.
+6. And there cannot possibly be larger number of independent vectors than basis in a set. If $b$ is the size of the basis of a vector space, then the moment you have $b$ independent vectors in a set, it becomes a basis. You cannot add another vector into it, since that new vector is actually representable using the basis.
 
 7. For a $d-$dimensional vector space, it's basis can have at most $d$ vector elements.
 
