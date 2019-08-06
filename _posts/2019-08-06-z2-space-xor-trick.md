@@ -243,12 +243,12 @@ Let's view some problems now:
 ### Problem 2
 ---
 
-> Given a set $S$ of size $1 \le n \le 10^5$ with elements $1 \le a_i \lt 2^{20}.$ Find the number of distinct integers that can be represented using xor over the set of the given elements.  
+> Given a set $S$ of size $1 \le n \le 10^5$ with elements $0 \le a_i \lt 2^{20}.$ Find the number of distinct integers that can be represented using xor over the set of the given elements.  
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 #### Solution
 
-Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of the set. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $\le d = 20$ by property $7.$
+Think of each element as a vector of dimension $d = 20.$ Then the vector space is $\mathbb{Z}\_2^{20}.$ We can find it's basis in $O(d \cdot n).$ For any linear combination of the basis vectors, we get a different possible xor of some subset. So, the answer would be $2^\text{size of basis}.$ It would fit in an integer type, since size of basis $\le d = 20$ by property $7.$
 
 #### Reference Code
 
