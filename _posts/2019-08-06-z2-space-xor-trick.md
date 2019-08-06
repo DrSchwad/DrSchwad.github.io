@@ -69,7 +69,7 @@ $\underline{\mathbb{Z\_2^b}}$: A $b-$dimensional vector space consisting of all 
 
 So, the problem:
 
-### Problem 1
+### Problem 1 (Division 2 - C)
 ---
 
 > Find the number of non-empty subsets of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
@@ -163,7 +163,7 @@ Let's view some problems now:
 
 ---
 
-### Problem 4
+### Problem 4 (1st Hunger Games - S)
 ---
 
 > We have an empty set $S$ and we are to do $1 \le n \le 10^6$ queries on it. Let, $X$ denote the set of all possible xor-sums of elements from a subset of $S.$ There are two types of queries.  
@@ -173,7 +173,7 @@ Type $2$: Given $k,$ print the $k$'th hightest number from $X.$ It's guaranteed 
 
 ---
 
-### Problem 5
+### Problem 5 (Division 2 - F)
 ---
 
 > You're given an array $1 \le a_i \lt 2^{20}$ of length $1 \le n \le 10^5.$ You have to answer $1 \le q \le 10^5$ queries.  
@@ -182,7 +182,7 @@ In each query you'll be given two integers $1 \le l \le n$ and $0 \le x \lt 2^{2
 
 ---
 
-### Problem 6
+### Problem 6 (Education Round - G)
 ---
 
 > You are given an array $0 \le a_i \le 10^9$ of $1 \le n \le 2 \cdot 10^5$ integers. You have to find the maximum number of segments this array can be partitioned into, such that -  
@@ -190,7 +190,7 @@ In each query you'll be given two integers $1 \le l \le n$ and $0 \le x \lt 2^{2
     2. Each segment contains at least one element  
     3. There doesn't exist a non-empty subset of segments such that bitwise-xor of the numbers from them is equal to $0$  
 Print $-1$ if no suitable partition exists.  
-[Link to the source](https://codeforces.com/blog/entry/60003)
+[Link to the source](https://codeforces.com/contest/1101/problem/G)
 
 ---
 
