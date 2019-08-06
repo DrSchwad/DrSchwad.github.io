@@ -11,12 +11,11 @@ comments: true
 published: true
 ---
 Working on it!
+
 $$
-\begin{equation*}\begin{array}{c}
-\phantom{\times99}384\\
-\underline{\times\phantom{999}56}\\
-\phantom{\times9}2304\\
-\underline{\phantom\times1920\phantom9}\\
-\phantom\times21504
+\begin{equation*}\begin{array}{r}
+1010\\
+\underline{\xor\1100}\\
+0110
 \end{array}\end{equation*}
 $$
