@@ -184,9 +184,9 @@ A few important properties of independent vectors and vector basis that we will 
 
 1. For a set of independent vectors, we can change any of these vectors by adding to it any linear combination of all of them, and the vectors will still stay independent. What's more fascinating is that, the set of vectors in the space representable by some linear combination of this independent set stays exactly the same after the change.
 
-2. Notice that, in case of $\mathbb{Z}\_2^b$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ So, to iterate all the linear combinations of some set of vectors, you just take an element vector or don't take it in the combination, there's no in-between.
+2. Notice that, in case of $\mathbb{Z}\_2^b$ vector space, the coefficients in the linear combination of vectors must also lie in $\mathbb{Z}\_2.$ Which means that, an element vector can either stay or not stay in a linear combination, there's no in-between.
 
-3. The basis is actually the smallest sized set such that all other vectors are representable using just the element vectors of that set.
+3. The basis is actually the smallest sized set such that all other vectors in the vector space are representable using by a linear combination of just the element vectors of that set.
 
 4. The basis vectors are independent.
 
