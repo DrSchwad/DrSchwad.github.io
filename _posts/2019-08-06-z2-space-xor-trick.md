@@ -36,9 +36,9 @@ Suppose, we're xor-ing the two numbers $2$ and $3.$ Let's do it below:
 
 $$
 \begin{equation*}\begin{array}{r}
-(10)\_b\\
-\underline{\oplus\;(11)\_b}\\
-(01)\_b
+(10)_2\\
+\underline{\oplus\;(11)_2}\\
+(01)_2
 \end{array}\end{equation*}
 $$
 
