@@ -74,7 +74,7 @@ Anyways, the problem:
 ### Problem 1 (Division 2 - C)
 ---
 
-> Find the number of non-empty subsets, modulo $10^9 + 7,$ of a given set of size $1 \le N \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
+> Find the number of non-empty subsets, modulo $10^9 + 7,$ of a given set of size $1 \le n \le 10^5$ with range of elements $1 \le a_i \le 70,$ such that the product of it's elements is a square number.  
 [Link to the source](https://codeforces.com/contest/895/problem/C)
 
 If you'd like to solve the problem first, then kindly pause and try it before reading on further.
@@ -97,7 +97,7 @@ with the initial value $\text{dp[0][0] = 1}.$ The final answer would be, $\text{
 
 But, the complexity is $O(n \cdot 2^{19},$ which is way too high :(
 
-The thing to notice here, is that, even if there are $10^5$ values of $a,$ the actual number of different possible $a$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
+The thing to notice here, is that, even if $n \le 10^5,$ the actual number of different possible $a_i$ is just $70.$ So, if find the dp for these $70$ different masks, and if for each $1 \le \text{at} \le 70$ know the number of ways to select odd/even number of array elements with value $\text{at},$ then we can easily count the answer with the following dp:
 
 $$
 \text{dp[at][msk] = dp[at - 1][msk] * poss[at][0] + dp[at - 1][msk ^ mask[at]] * poss[at][1]}
