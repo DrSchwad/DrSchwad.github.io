@@ -374,7 +374,8 @@ Type $2$: Given $k,$ print the $k$'th hightest number from $X.$ It's guaranteed 
 
 #### Solution
 
-A bit like the previous one. For query type $2,$ again we'll iterate through the basis vectors according to their decreading order of $f$ values. Suppose $\vec{b}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b})$'th bit of ```answer``` to $0$ and otherwise to $1.$
+A bit like the previous one. For query type $2,$ again we'll iterate through the basis vectors according to their decreading order of $f$ values.  
+Suppose $\vec{b_h}$ is the one with the hightest $f$ value. Initially we know there are $2^\text{basis size}$ elements in $X.$ So, if $k <= \frac{2^\text{basis size}}{2},$ we set the $f(\vec{b})$'th bit of ```answer``` to $0.$ Otherwise we set it to $1$ and subtract $\frac{2^\text{basis size}}{2}$ from $k.$ Then we move on to the next basis vector and continue, in the end $k$ will be $1$ and we'll get our answer by setting $0$ in ```answer``` for all $f(\vec{b_i})$'th bits from that point.
 
 #### Reference Code
 {% highlight cpp linenos %}
