@@ -216,7 +216,7 @@ If, after iterating through all the basis vector $\vec{b}$'s and subtracting the
 Here's the implementation, the vectors being represented by bitmasks of length $d$:
 
 {% highlight cpp linenos %}
-int basis[d]; // basis[i] keeps the index of the vector whose f value is i
+int basis[d]; // basis[i] keeps the mask of the vector whose f value is i
 
 int sz; // Current size of the basis
 
