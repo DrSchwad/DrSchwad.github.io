@@ -243,7 +243,7 @@ Let's view some problems now:
 ### Problem 2
 ---
 
-> Given a set $S$ of size $1 \le n \le 10^5$ with elements $0 \le a_i \lt 2^{20}.$ Find the number of distinct integers that can be represented using xor over the set of the given elements.  
+> Given a set $S$ of size $1 \le n \le 10^5$ with elements $0 \le a_i \lt 2^{20}.$ Find the number of distinct integers that can be represented using xor over the set of the given elements (empty set included, yielding xor 0).  
 [Link to the source](https://codeforces.com/blog/entry/60003)
 
 #### Solution
